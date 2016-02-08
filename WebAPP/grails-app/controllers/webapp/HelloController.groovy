@@ -32,4 +32,12 @@ class HelloController {
         Person person = new Person(age:55)
         [ person:person ]
     }
+
+    def save()
+    {
+        Person person = new Person(params)
+        person.save()
+        render (view: "index.gsp", model: [person: person])
+
+    }
 }
